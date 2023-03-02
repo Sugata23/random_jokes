@@ -1,27 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dad Jokes</title>
-    <link rel="stylesheet" href="main.css">
-</head>
-<body class="flex items-center justify-center h-screen font-serif
-bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-green-200 via-green-300 to-blue-500">
-    <div class="w-96 p-8 bg-gray-100 rounded-xl text-center" id="container"> 
-        <h1 class="font-bold mb-5 mt-0 text-lg text-gray-800">Dad Jokes 😆</h1>
-        <div class="mx-auto my-auto p-10 bg-blue-300 rounded-xl shadow-2xl text-center" id="joke-box"> 
-            <p class="text-base mb-6 " id="joke-text">Loading joke..</p> 
-            <button class="px-2 py-2 text-slate-100 rounded-xl bg-sky-600 hover:bg-green-700 cursor-pointer transition duration-300 ease-in-out" id="new-joke-button">New Joke</button>  
-        </div>
-        <form action="" class="mb-6" id="category-form">  
-            <label for="category-select" class="block text-lg mb-5 mt-9 ">Select a category</label>
-            <select id="category-select" name="category-select" class="text-lg px-3 py-2 rounded-xl shadow-xl border-none mr-4 bg-green-400 "></select>
-            <button class="text-base px-3 py-2 rounded-xl  border-none mr-4 bg-yellow-200 text-black cursor-pointer shadow-xl hover:bg-yellow-500  transition duration-300 ease-in-out" id="submit-category-button">Get Jokes</button>  
-
-        </form>
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="flex items-center justify-center h-screen font-serif bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-green-200 via-green-300 to-blue-500"
+  >
+    <div class="w-96 p-8 bg-gray-100 rounded-xl text-center" id="container">
+      <h1 class="font-bold mb-5 mt-0 text-lg text-gray-800">Dad Jokes 😆</h1>
+      <div
+        class="mx-auto my-auto p-10 bg-blue-300 rounded-xl shadow-2xl text-center"
+        id="joke-box"
+      >
+        <p class="text-base mb-6" id="joke-text">Loading joke..</p>
+        <button
+          class="px-2 py-2 text-slate-100 rounded-xl bg-sky-600 hover:bg-green-700 cursor-pointer transition duration-300 ease-in-out"
+          id="new-joke-button"
+        >
+          New Joke
+        </button>
+      </div>
+      <form action="" class="mb-6" id="category-form">
+        <label for="category-select" class="block text-lg mb-5 mt-9"
+          >Select a category</label
+        >
+        <select
+          id="category-select"
+          name="category-select"
+          class="text-lg px-3 py-2 rounded-xl shadow-xl border-none mr-4 bg-green-400"
+        ></select>
+        <button
+          class="text-base px-3 py-2 rounded-xl border-none mr-4 bg-yellow-200 text-black cursor-pointer shadow-xl hover:bg-yellow-500 transition duration-300 ease-in-out"
+          id="submit-category-button"
+        >
+          Get Jokes
+        </button>
+      </form>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
